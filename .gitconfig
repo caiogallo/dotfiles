@@ -5,6 +5,8 @@
 [alias]
 	ck = checkout
 	st = status
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
 
 # alias bitbucket: para url do bitbucket
 [url "git@bitbucket.org:caiogallo/"]
