@@ -95,3 +95,6 @@ gitadd-repo(){
 
 export PATH=$PATH:/opt/elixir/bin
 alias mci='mvn clean install'
+
+export NVM_DIR="/home/caio/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
