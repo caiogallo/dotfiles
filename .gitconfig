@@ -1,0 +1,19 @@
+[user]
+	email = caio.gallo@gmail.com
+	name = Caio César Gallo
+
+[alias]
+	ck = checkout
+	st = status
+
+# alias bitbucket: para url do bitbucket
+[url "git@bitbucket.org:caiogallo/"]
+	insteadOf = bitbucket:
+
+#alias github: para url do github
+[url "git@github.com:caiogallo/"]
+	insteadOf = github:
+
+
+[core]
+	editor = vim
