@@ -115,7 +115,9 @@ bitadd-repo(){ curl --user caio.gallo@gmail.com https://api.bitbucket.org/1.0/re
 
 # Funcao para facilitar a criação de um repositorio no github usando linha de comando
 gitadd-repo(){
-        curl -u 'caiogallo' https://api.github.com/user/repos -d '{"name":"'$@'"}'
+        echo -n '2f-auth: '
+        read two_fa
+        curl -H 'X-GitHub-OTP: '${two_fa}'' -u 'caiogallo' https://api.github.com/user/repos -d '{"name":"'$@'", "private": true}'
 }
 
 # Arch show ip
@@ -162,3 +164,5 @@ alias sr='mvn clean package spring-boot:run'
 source /usr/share/rvm/scripts/rvm
 
 source /usr/share/nvm/init-nvm.sh
+
+source /home/caio/Projetos/shells/monitor/walmart/common.sh
