@@ -166,3 +166,8 @@ source /usr/share/rvm/scripts/rvm
 source /usr/share/nvm/init-nvm.sh
 
 source /home/caio/Projetos/shells/monitor/walmart/common.sh
+
+source /home/caio/Projetos/shells/walmart/self-help-frontend-varnish.sh
+
+export PATH=~/Android/Sdk/platform-tools:$PATH
+
