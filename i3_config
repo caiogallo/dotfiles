@@ -182,6 +182,8 @@ set $secondMonitor eDP1
 workspace 1 output $firstMonitor
 workspace 2 output $secoundMonitor
 
-#
-
+# Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Compositor
+exec_always --no-startup-id compton -b --config .config/compton/compton.conf
