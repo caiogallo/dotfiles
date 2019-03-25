@@ -169,5 +169,5 @@ source /home/caio/Projetos/shells/monitor/walmart/common.sh
 
 source /home/caio/Projetos/shells/walmart/self-help-frontend-varnish.sh
 
-export PATH=~/Android/Sdk/platform-tools:$PATH
+export PATH=~/.bin:~/Android/Sdk/platform-tools:$PATH
 
