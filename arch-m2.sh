@@ -13,7 +13,6 @@ availablem2 = []
 
 for file in os.listdir('.'):
 	if(file[:2] == 'm2'):
-		print(file)
 		availablem2.append(file)
 
 message = '{}. {}'
