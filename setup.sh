@@ -13,3 +13,9 @@ ln -s `pwd`/gitconfig ~/.gitconfig
 echo installing default apps
 
 sudo pacman -S git zsh terminator firefox python
+
+echo creating a ~/.bin for my files
+
+rm -rf ~/.bin
+mkdir ~/.bin
+ln -s `pwd`/arch-m2.sh ~/.bin/m2
