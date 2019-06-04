@@ -139,7 +139,8 @@ pacman-clearcache(){
 }
 
 docker-remove-unused-images(){
-   docker rmi `docker images | awk '{ print $3; }'`
+   # docker rmi `docker images | awk '{ print $3; }'`
+   docker image prune -a
 }
 
 reinstall-package-with-dependencies(){
@@ -155,7 +156,7 @@ yaourt-without-pgp(){
 }
 
 du-large-files(){
-	sudo du -ha $(pwd) | sort -n -r | head -n 10
+	du -hsx -- * | sort -rh | head -10
 }
 
 alias mci='mvn clean install'
@@ -165,9 +166,13 @@ source /usr/share/rvm/scripts/rvm
 
 source /usr/share/nvm/init-nvm.sh
 
-source /home/caio/Projetos/shells/monitor/walmart/common.sh
+# source /home/caio/Projetos/shells/monitor/walmart/common.sh
 
 source /home/caio/Projetos/shells/walmart/self-help-frontend-varnish.sh
 
 export PATH=~/.bin:~/Android/Sdk/platform-tools:$PATH
+
+# enable zsh notification service
+# nohup /usr/lib/notification-daemon-1.0/notification-daemon 2>&1
+
 

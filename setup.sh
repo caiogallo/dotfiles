@@ -19,3 +19,4 @@ echo creating a ~/.bin for my files
 rm -rf ~/.bin
 mkdir ~/.bin
 ln -s `pwd`/arch-m2.sh ~/.bin/m2
+ln -s ~/Projetos/shells/general/restart-systemd.sh ~/.bin/restart-systemd

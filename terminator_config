@@ -103,8 +103,9 @@
 [plugins]
 [profiles]
   [[default]]
+    allow_bold = False
     cursor_color = "#aaaaaa"
-    font = Mono 8
+    font = Monospace 8
     login_shell = True
     scrollback_infinite = True
     use_system_font = False
