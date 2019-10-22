@@ -10,9 +10,9 @@ ln -s `pwd`/zshrc ~/.zshrc
 ln -s `pwd`/terminator_config ~/.config/terminator/config
 ln -s `pwd`/gitconfig ~/.gitconfig
 
-echo installing default apps
+# echo installing default apps
 
-sudo pacman -S git zsh terminator firefox python
+# sudo pacman -S git zsh terminator firefox python
 
 echo creating a ~/.bin for my files
 
