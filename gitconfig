@@ -1,28 +1,10 @@
 [user]
 	email = caio.gallo@gmail.com
 	name = Caio C. Gallo
-	signingkey = 30F2B65B9246B6CA
-
-[gpg]
-	program = gpg2
-	
-[commit]
-	gpgsign = true	
 
 [alias]
 	ck = checkout
 	st = status
 
-# alias bitbucket: para url do bitbucket
-[url "git@bitbucket.org:caiogallo/"]
-	insteadOf = bitbucket:
-
-#alias github: para url do github
-[url "git@github.com:caiogallo/"]
-	insteadOf = github:
-
-
 [core]
 	editor = vim
-[http]
-	sslVerify = false
