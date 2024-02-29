@@ -1,7 +1,8 @@
+PWD=$(shell pwd)
 
 install:
-	@ln -s `pwd`/gitconfig ~/.gitconfig
-	@ln -s 'pwd'/zshrc ~/.zshrc
+	@ln -s $(PWD)/gitconfig ~/.gitconfig
+	@ln -s $(PWD)/zshrc ~/.zshrc
 
 clean: 
 	@rm ~/.gitconfig ~/.zshrc
@@ -13,6 +14,11 @@ install-ohmyzsh:
 	@wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 	sh install.sh
 	@rm install.sh
+
+install-neovim:
+	@curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+	sudo rm -rf /opt/nvim
+	sudo tar -C /opt -xzf nvim-linux64.tar.gz
 
 all: clean install
 
