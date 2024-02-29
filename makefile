@@ -1,9 +1,10 @@
 
 install:
 	@ln -s `pwd`/gitconfig ~/.gitconfig
+	@ln -s 'pwd'/zshrc ~/.zshrc
 
 clean: 
-	@rm ~/.gitconfig
+	@rm ~/.gitconfig ~/.zshrc
 
 generate-ssh-key:
 	ssh-keygen -t ed25519 -C "caio.gallo@gmail.com"
