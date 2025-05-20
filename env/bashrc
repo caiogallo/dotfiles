@@ -1,19 +1,19 @@
 #
 # ~/.bashrc
 #
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+CONFIG_PATH=~/Projects/dotfiles
 
 set -o vi
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
-
-PATH=$PATH:~/.local/bin:$HOME/.cargo/bin:~/.local/bin/zig:$HOME/.local/bin/lua-lang-server/bin:$HOME/go/bin
-
 alias vim=nvim
+
+PATH=$PATH:~/.local/bin
+source ${CONFIG_PATH}/extra-path
 
 function create_ramdisk() {
     mkdir -p ~/ramdisk
@@ -26,5 +26,3 @@ function config_ssh_auth() {
     gpgconf --launc gpg-agent
 }
 config_ssh_auth
-
-. "$HOME/.cargo/env"

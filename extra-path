@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+
+export PATH=$PATH:$HOME/.cargo/bin:~/.local/bin/zig:$HOME/.local/bin/lua-lang-server/bin:$HOME/go/bin
