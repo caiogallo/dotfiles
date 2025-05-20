@@ -26,3 +26,5 @@ function config_ssh_auth() {
     gpgconf --launc gpg-agent
 }
 config_ssh_auth
+
+bind '"\C-f":"tmux-sessionizer\n"'
