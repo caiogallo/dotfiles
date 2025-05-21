@@ -7,4 +7,7 @@ sudo pacman -S --noconfirm --needed fzf
 sudo pacman -S --noconfirm --needed tmux
 
 # hyprland
-sudo pacman -S --noconfirm --needed waybar
+sudo pacman -S --noconfirm --needed waybar wl-clipboard
+
+sudo pacman -Rns pulseaudio
+sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse pipewire-alsa
