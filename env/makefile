@@ -7,6 +7,7 @@ install:
 	@ln -s $(PWD)/tmux.config ~/.tmux.config
 	@ln -s ${PWD}/../nvim ~/.config/nvim
 	@ln -s ${PWD}/waybar ~/.config/waybar
+	@ln -s ${PWD}/kitty ~/.config/kitty
 clean: 
 	@rm -rf ~/.gitconfig 
 	@rm -rf ~/.config/hypr/hyprland.conf
@@ -14,6 +15,7 @@ clean:
 	@rm -rf ~/.tmux.config
 	@rm -rf ~/.config/nvim
 	@rm -rf ~/.config/waybar
+	@rm -rf ~/.config/kitty
 
 all: clean install
 
