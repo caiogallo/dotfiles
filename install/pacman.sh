@@ -5,9 +5,16 @@ sudo pacman -S --noconfirm --needed git neovim base-devel
 sudo pacman -S --noconfirm --needed tldr
 sudo pacman -S --noconfirm --needed fzf
 sudo pacman -S --noconfirm --needed tmux
+sudo pacman -S --noconfirm --needed go
 
 # hyprland
-sudo pacman -S --noconfirm --needed waybar wl-clipboard hyprpolkitagent
+sudo pacman -S --noconfirm --needed waybar wl-clipboard hyprpolkitagent hyprlock
+
+#bluetooth
+sudo pacman -S --noconfirm --needed blueman
+
+#network
+#sudo pacman -S --noconfirm --needed networkmanager
 
 sudo pacman -Rns pulseaudio
 sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse pipewire-alsa pavucontrol

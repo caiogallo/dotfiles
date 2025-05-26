@@ -35,6 +35,7 @@
 		"disk",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
+		"custom/power",
 		"tray"
 	],
 
@@ -106,5 +107,11 @@
 	},
 	"tray": {
 		"icon-size": 20
+	},
+	"custom/power": {
+		"format": "  ",
+		"on-click": "systemctl poweroff",
+		"tooltip": true,
+		"tooltip-format": "关机"
 	}
 }
