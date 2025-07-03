@@ -28,3 +28,5 @@ function config_ssh_auth() {
 config_ssh_auth
 
 bind '"\C-f":"tmux-sessionizer\n"'
+
+export XCOMPOSEFILE=$HOME/.XCompose
