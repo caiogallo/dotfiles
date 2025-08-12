@@ -23,3 +23,4 @@ sudo pacman -S --noconfirm --needed xdg-desktop-portal-hyprland
 
 sudo pacman -Rns pulseaudio
 sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse pipewire-alsa pavucontrol
+sudo pacman -S --noconfirm --needed wl-clipboard
