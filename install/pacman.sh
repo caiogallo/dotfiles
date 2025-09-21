@@ -8,12 +8,12 @@ sudo pacman -S --noconfirm --needed tmux
 sudo pacman -S --noconfirm --needed go
 
 # hyprland
-sudo pacman -S --noconfirm --needed waybar wl-clipboard hyprpolkitagent hyprlock
+sudo pacman -S --noconfirm --needed waybar hyprpolkitagent hyprlock
 
-paru -S --noconfirm --needed hyprshot
+#paru -S --noconfirm --needed hyprshot
 
 #bluetooth
-sudo pacman -S --noconfirm --needed blueman
+#sudo pacman -S --noconfirm --needed blueman
 
 #network
 #sudo pacman -S --noconfirm --needed networkmanager
@@ -21,6 +21,6 @@ sudo pacman -S --noconfirm --needed blueman
 # XDG Portal
 sudo pacman -S --noconfirm --needed xdg-desktop-portal-hyprland
 
-sudo pacman -Rns pulseaudio
-sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse pipewire-alsa pavucontrol
-sudo pacman -S --noconfirm --needed wl-clipboard
+#sudo pacman -Rns pulseaudio
+#sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse pipewire-alsa pavucontrol
+#sudo pacman -S --noconfirm --needed wl-clipboard
