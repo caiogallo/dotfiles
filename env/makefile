@@ -9,6 +9,14 @@ install:
 	@ln -s ${PWD}/waybar ~/.config/waybar
 	@ln -s ${PWD}/kitty ~/.config/kitty
 	@ln -s ${PWD}/XCompose ~/.XCompose
+	@ln -s ${PWD}/hypridle.conf ~/.config/hypr/hypridle.conf
+	@ln -s ${PWD}/hyprlock.conf ~/.config/hypr/hyprlock.conf
+	
+	@mkdir -p ~/.assets; cp assets/lock_background.jpg ~/.assets/lock_background.jpg
+
+	@sudo cp ${PWD}/timeshift-autosnap.conf /etc/timeshift-autosnap.conf
+	@sudo cp ${PWD}/pacman.conf /etc/pacman.conf
+
 clean: 
 	@rm -rf ~/.gitconfig 
 	@rm -rf ~/.config/hypr/hyprland.conf
@@ -18,6 +26,13 @@ clean:
 	@rm -rf ~/.config/waybar
 	@rm -rf ~/.config/kitty
 	@rm -rf ~/.XCompose
+	@rm -rf ~/.config/hypr/hypridle.conf
+	@rm -rf ~/.config/hypr/hyprlock.conf
+
+	@rm -rf ~/.assets
+
+	@sudo rm -rf /etc/timeshift-autosnap.conf
+	@sudo rm -rf /etc/pacman.conf
+
 
 all: clean install
-
