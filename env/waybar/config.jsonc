@@ -1,6 +1,7 @@
 // -*- mode: json -*-
 
 {
+    "reload_style_on_change": true,
 	"layer": "top",
 	"position": "top",
 
@@ -21,7 +22,9 @@
 	],
 	"modules-right": [
 		"custom/left-arrow-dark",
+		"bluetooth",
 		"pulseaudio",
+		"battery",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"memory",
@@ -78,6 +81,13 @@
 		"tooltip": false
 	},
 
+	"bluetooth": {
+		"format": "",
+		"format-disabled": "󰂲",
+		"format-connected": "",
+		"tooltip-format": "Devices connected: {num_connections}",
+		"on-click": "blueberry"
+	},
 	"pulseaudio": {
 		"format": "{icon} {volume:2}%",
 		"format-bluetooth": "{icon}  {volume}%",
@@ -90,8 +100,29 @@
 			]
 		},
 		"scroll-step": 5,
-		"on-click": "pavucontrol",
+		"on-click": "kitty --class=Wiremix -e wiremix",
+		"on-click-right": "pamixer -t"
 	},
+	"battery": {
+		"format": "{capacity}% {icon}",
+		"format-discharging": "{icon}",
+		"format-charging": "{icon}",
+		"format-plugged": "",
+		"format-icons": {
+			"charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+			"default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+		},
+		"format-full": "󰂅",
+		"tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+		"tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+		"interval": 5,
+		"on-click": "omarchy-menu power",
+		"states": {
+			"warning": 20,
+			"critical": 10
+		}
+	},
+
 	"memory": {
 		"interval": 5,
 		"format": "Mem {}%"

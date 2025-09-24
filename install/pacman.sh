@@ -21,7 +21,7 @@ sudo pacman -S --noconfirm --needed blueberry
 sudo pacman -S --noconfirm --needed xdg-desktop-portal-hyprland
 
 # Audio
-sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse pipewire-alsa
+sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse pipewire-alsa wiremix pamixer
 
 # Power control, battery threshould, performance profiles
 sudo pacman -S --noconfirm --needed tlp
