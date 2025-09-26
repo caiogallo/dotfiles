@@ -11,6 +11,7 @@ install:
 	@ln -s ${PWD}/XCompose ~/.XCompose
 	@ln -s ${PWD}/hypridle.conf ~/.config/hypr/hypridle.conf
 	@ln -s ${PWD}/hyprlock.conf ~/.config/hypr/hyprlock.conf
+	@mkdir -p ~/.config/fontconfig; cp ${PWD}/fonts.conf ~/.config/fontconfig/fonts.conf
 	
 	@mkdir -p ~/.assets; cp assets/lock_background.jpg ~/.assets/lock_background.jpg
 
@@ -28,6 +29,7 @@ clean:
 	@rm -rf ~/.XCompose
 	@rm -rf ~/.config/hypr/hypridle.conf
 	@rm -rf ~/.config/hypr/hyprlock.conf
+	@rm -rf ~/.config/fontconfig/fonts.config
 
 	@rm -rf ~/.assets
 

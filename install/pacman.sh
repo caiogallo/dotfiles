@@ -23,6 +23,10 @@ sudo pacman -S --noconfirm --needed xdg-desktop-portal-hyprland
 # Audio
 sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse pipewire-alsa wiremix pamixer
 
+# Fonts
+sudo pacman -S --noconfirm --needed fontconfig
+sudo pacman -S --noconfirm --needed ttf-jetbrains-mono-nerd
+
 # Power control, battery threshould, performance profiles
 sudo pacman -S --noconfirm --needed tlp
 sudo systemctl enable --now tlp.service
@@ -37,5 +41,12 @@ sudo systemctl enable --now swayosd-libinput-backend.service # gst-plugin-pipewi
 sudo pacman -S --noconfirm --needed timeshift
 paru -S --noconfirm --needed timeshift-autosnap
 
+#docker 
+sudo pacman -S --noconfirm --needed docker docker-compose
+sudo usermod -aG docker $USER
+
 # zenbook Audio
 sudo pacman -S --noconfirm --needed sof-firmware
+
+# apps
+sudo pacman -S --noconfirm --needed obsidian obs-studio

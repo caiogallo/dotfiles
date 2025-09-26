@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+option=$1
+
+case "$option" in
+	"open")
+		hyprctl dispatch dpms on
+		;;
+	"close")
+		hyprctl dispatch dpms off
+		hyprlock
+		;;
+esac
