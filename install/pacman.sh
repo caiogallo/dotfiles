@@ -38,7 +38,7 @@ sudo pacman -S --noconfirm --needed brightnessctl
 sudo pacman -S --noconfirm --needed swayosd
 sudo systemctl enable --now swayosd-libinput-backend.service # gst-plugin-pipewire
 
-sudo pacman -S --noconfirm --needed timeshift
+sudo pacman -S --noconfirm --needed timeshift xorg-xhost
 paru -S --noconfirm --needed timeshift-autosnap
 
 #docker 

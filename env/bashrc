@@ -30,3 +30,9 @@ config_ssh_auth
 bind '"\C-f":"tmux-sessionizer\n"'
 
 export XCOMPOSEFILE=$HOME/.XCompose
+
+function g() {
+	local encoded=$(echo $@ | jq -sRr @uri)
+	xdg-open https://www.google.com/search?q=$encoded
+	hyprctl dispatch workspace 1
+}
