@@ -41,6 +41,8 @@ sudo systemctl enable --now swayosd-libinput-backend.service # gst-plugin-pipewi
 sudo pacman -S --noconfirm --needed timeshift xorg-xhost
 paru -S --noconfirm --needed timeshift-autosnap
 
+sudo pacman -S --noconfirm --network uwsm
+
 #docker 
 sudo pacman -S --noconfirm --needed docker docker-compose
 sudo usermod -aG docker $USER

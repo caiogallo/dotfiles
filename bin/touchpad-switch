@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Define o dispositivo a ser alternado
+HYPRLAND_DEVICE="asuf1208:00-2808:0218-touchpad"
+HYPRLAND_VARIABLE="device:$HYPRLAND_DEVICE:enabled"
+
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+  export XDG_RUNTIME_DIR=/run/user/$(id -u)
+fi
+
+# Verifica se o dispositivo está atualmente habilitado (1 = habilitado, 0 = desabilitado)
+DEVICE="$(hyprctl getoption $HYPRLAND_VARIABLE | grep 'int: 1')"
+
+if [ -z "$DEVICE" ]; then
+	# se o dispositivo estiver desabilitado, então habilite
+  	notify-send -u normal "Habilitando Touchpad"
+	hyprctl keyword $HYPRLAND_VARIABLE true
+else
+	# se o dispositivo estiver habilitado, então desabilite
+	notify-send -u normal "Desabilitando Touchpad"
+	hyprctl keyword $HYPRLAND_VARIABLE false
+fi
