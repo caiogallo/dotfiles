@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Reddit
+StartupNotify=true
+Exec=uwsm app -- chromium --app=https://reddit.com --class=Reddit
+Categories=Web

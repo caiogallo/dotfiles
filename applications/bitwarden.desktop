@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Bitwarden
+StartupNotify=true
+Exec=uwsm app -- chromium --app=https://vault.bitwarden.com/ --class=Bitwarden
+Categories=Web

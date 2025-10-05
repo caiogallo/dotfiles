@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=X
+StartupNotify=true
+Exec=uwsm app -- chromium --app=https://x.com --class=X
+Categories=Web
+Keywords=Twitter

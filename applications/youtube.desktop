@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=YouTube
+StartupNotify=true
+Exec=uwsm app -- chromium --app=https://youtube.com --class=YouTube
+Categories=Web

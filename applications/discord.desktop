@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Discord
+StartupNotify=true
+Exec=uwsm app -- chromium --app=https://discord.com --class=Discord
+Categories=Web
