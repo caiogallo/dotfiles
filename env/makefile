@@ -2,6 +2,7 @@ PWD=$(shell pwd)
 
 install:
 	@ln -s $(PWD)/gitconfig ~/.gitconfig
+	@mkdir -p ~/.config/hypr
 	@ln -s $(PWD)/hyprland.conf ~/.config/hypr/hyprland.conf
 	@ln -s $(PWD)/bashrc ~/.bashrc
 	@ln -s $(PWD)/tmux.config ~/.tmux.config
