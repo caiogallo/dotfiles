@@ -13,6 +13,7 @@ sudo pacman -S --noconfirm --needed waybar hyprpolkitagent hyprlock hypridle
 
 #bluetooth
 sudo pacman -S --noconfirm --needed blueberry
+sudo systemctl enable --now bluetooth.service
 
 #network
 #sudo pacman -S --noconfirm --needed networkmanager
@@ -21,7 +22,7 @@ sudo pacman -S --noconfirm --needed blueberry
 sudo pacman -S --noconfirm --needed xdg-desktop-portal-hyprland
 
 # Audio
-sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse pipewire-alsa wiremix pamixer
+sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse pipewire-alsa pipewire-jack wiremix pamixer
 
 # Fonts
 sudo pacman -S --noconfirm --needed fontconfig
@@ -52,4 +53,5 @@ sudo usermod -aG docker $USER
 sudo pacman -S --noconfirm --needed sof-firmware
 
 # apps
-sudo pacman -S --noconfirm --needed obsidian obs-studio
+sudo pacman -S --noconfirm --needed obsidian obs-studio waypipe
+paru -S --noconfirm --needed localsend 
