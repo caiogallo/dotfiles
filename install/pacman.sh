@@ -55,3 +55,6 @@ sudo pacman -S --noconfirm --needed sof-firmware
 # apps
 sudo pacman -S --noconfirm --needed obsidian obs-studio waypipe
 paru -S --noconfirm --needed localsend 
+
+# wdisplays
+paru -S --noconfirm --needed wdisplays
