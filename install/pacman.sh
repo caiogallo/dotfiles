@@ -58,3 +58,6 @@ paru -S --noconfirm --needed localsend
 
 # wdisplays
 paru -S --noconfirm --needed wdisplays
+sudo pacman -S yubikey-personalization
+sudo pacman -S yubikey-full-disk-encryption
+sudo pacman -S yubikey-manager
