@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=Hacker News
-StartupNotify=true
-Exec=uwsm app -- chromium --app=https://news.ycombinator.com --class=HackerNews
-Categories=Web
-Keywords=HackerNews

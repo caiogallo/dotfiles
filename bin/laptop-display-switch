@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-disabled=$(hyprctl monitors -j | jq -r '.[] | select(.name == "eDP-1").disabled')
-if [[ -z "$disabled" ]]; then
-	hyprctl keyword monitor "eDP-1,2880x1800@120,0x0,2"
-else
-	hyprctl keyword monitor "eDP-1,disable"
-fi
