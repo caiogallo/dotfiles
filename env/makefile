@@ -1,7 +1,7 @@
 PWD=$(shell pwd)
 
 install:
-	@ln -s ${PWD}/../nvim ~/.config/nvim
+	#@ln -s ${PWD}/../nvim ~/.config/nvim
 	@ln -s ./bindings.conf ~/.config/hypr/bindings.conf
 	@ln -s ./monitors.conf ~/.config/hypr/monitors.conf
 	@ln -s ./hyprland.conf ~/.config/hypr/hyprland.conf
