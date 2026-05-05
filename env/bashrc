@@ -37,10 +37,26 @@ function g() {
 	hyprctl dispatch workspace 1
 }
 
-function open_crypt() {
+function open_crypt_nb() {
 	sudo ykfde-open -d /dev/nvme0n1p8 -n cryptdados
 	sudo mount /dev/mapper/cryptdados /mnt/dados
 }
 
+function open_crypt() {
+	sudo cryptsetup luksOpen /dev/sda1 cryptpen
+	sudo mount /dev/mapper/cryptpen /mnt/dados
+}
+
+function close_crypt() {
+	sudo umount /mnt/dados
+	sudo cryptsetup close cryptpen
+}
+
 export EDITOR=nvim
 export VISUAL=nvim
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/caio/.lmstudio/bin"
+# End of LM Studio CLI section
+
+export DBX_SKIP_WORKDIR=1
