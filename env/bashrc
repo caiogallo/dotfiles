@@ -38,8 +38,8 @@ function g() {
 }
 
 function open_crypt() {
-	sudo ykfde-open -d /dev/nvme0n1p8 -n cryptdados
-	sudo mount /dev/mapper/cryptdados /mnt/dados
+	sudo cryptsetup luksOpen /dev/nvme0n1p1 cryptpen
+	sudo mount /dev/mapper/cryptpen /mnt/dados
 }
 
 export EDITOR=nvim
