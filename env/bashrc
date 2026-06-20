@@ -43,7 +43,7 @@ function open_crypt_nb() {
 }
 
 function open_crypt() {
-	sudo cryptsetup luksOpen /dev/sda1 cryptpen
+	sudo cryptsetup luksOpen /dev/sdc1 cryptpen
 	sudo mount /dev/mapper/cryptpen /mnt/dados
 }
 
@@ -60,3 +60,7 @@ export PATH="$PATH:/home/caio/.lmstudio/bin"
 # End of LM Studio CLI section
 
 export DBX_SKIP_WORKDIR=1
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export NDK_HOME=$ANDROID_HOME/ndk/$(ls $ANDROID_HOME/ndk | tail -1)
+export PATH=$PATH:$ANDROID_HOME/platform-tools
