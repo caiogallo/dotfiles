@@ -12,7 +12,7 @@ install:
 	@ln -fs ${PWD}/XCompose ~/.XCompose
 	@ln -fs ${PWD}/hypridle.conf ~/.config/hypr/hypridle.conf
 	@ln -fs ${PWD}/hyprlock.conf ~/.config/hypr/hyprlock.conf
-	@mkdir -p ~/.config/pipewire/pipewire.conf.d; ln -s ${PWD}/echo-cancel.conf ~/.config/pipewire/pipewire.conf.d/echo-cancel.conf
+	@mkdir -p ~/.config/pipewire/pipewire.conf.d; ln -fs ${PWD}/echo-cancel.conf ~/.config/pipewire/pipewire.conf.d/echo-cancel.conf
 	@mkdir -p ~/.config/fontconfig; cp ${PWD}/fonts.conf ~/.config/fontconfig/fonts.conf
 	
 	@mkdir -p ~/.assets; cp assets/lock_background.jpg ~/.assets/lock_background.jpg
