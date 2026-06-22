@@ -1,17 +1,17 @@
 PWD=$(shell pwd)
 
 install:
-	@ln -s $(PWD)/gitconfig ~/.gitconfig
+	@ln -fs $(PWD)/gitconfig ~/.gitconfig
 	@mkdir -p ~/.config/hypr
-	@ln -s $(PWD)/hyprland.conf ~/.config/hypr/hyprland.conf
-	@ln -s $(PWD)/bashrc ~/.bashrc
-	@ln -s $(PWD)/tmux.config ~/.tmux.conf
-	@ln -s ${PWD}/../nvim ~/.config/nvim
-	@ln -s ${PWD}/waybar ~/.config/waybar
-	@ln -s ${PWD}/kitty ~/.config/kitty
-	@ln -s ${PWD}/XCompose ~/.XCompose
-	@ln -s ${PWD}/hypridle.conf ~/.config/hypr/hypridle.conf
-	@ln -s ${PWD}/hyprlock.conf ~/.config/hypr/hyprlock.conf
+	@ln -fs $(PWD)/hyprland.conf ~/.config/hypr/hyprland.conf
+	@ln -fs $(PWD)/bashrc ~/.bashrc
+	@ln -fs $(PWD)/tmux.config ~/.tmux.conf
+	@ln -fs ${PWD}/../nvim ~/.config/nvim
+	@ln -fs ${PWD}/waybar ~/.config/waybar
+	@ln -fs ${PWD}/kitty ~/.config/kitty
+	@ln -fs ${PWD}/XCompose ~/.XCompose
+	@ln -fs ${PWD}/hypridle.conf ~/.config/hypr/hypridle.conf
+	@ln -fs ${PWD}/hyprlock.conf ~/.config/hypr/hyprlock.conf
 	@mkdir -p ~/.config/pipewire/pipewire.conf.d; ln -s ${PWD}/echo-cancel.conf ~/.config/pipewire/pipewire.conf.d/echo-cancel.conf
 	@mkdir -p ~/.config/fontconfig; cp ${PWD}/fonts.conf ~/.config/fontconfig/fonts.conf
 	
@@ -23,15 +23,15 @@ install:
 
 clean: 
 	@rm -rf ~/.gitconfig 
-	@rm -rf ~/.config/hypr/hyprland.conf
+	#@rm -rf ~/.config/hypr/hyprland.conf
 	@rm -rf ~/.bashrc
 	@rm -rf ~/.tmux.conf
 	@rm -rf ~/.config/nvim
 	@rm -rf ~/.config/waybar
 	@rm -rf ~/.config/kitty
 	@rm -rf ~/.XCompose
-	@rm -rf ~/.config/hypr/hypridle.conf
-	@rm -rf ~/.config/hypr/hyprlock.conf
+	#@rm -rf ~/.config/hypr/hypridle.conf
+	#@rm -rf ~/.config/hypr/hyprlock.conf
 	@rm -rf ~/.config/fontconfig/fonts.config
 	@rm -rf ~/.config/pipewire/pipewire.conf.d/echo-cancel.conf
 
