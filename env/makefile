@@ -7,8 +7,8 @@ install:
 	@ln -fs $(PWD)/bashrc ~/.bashrc
 	@ln -fs $(PWD)/tmux.config ~/.tmux.conf
 	@ln -fs ${PWD}/../nvim ~/.config/nvim
-	@ln -fs ${PWD}/waybar ~/.config/waybar
-	@ln -fs ${PWD}/kitty ~/.config/kitty
+	@ln -s ${PWD}/waybar ~/.config/waybar
+	@ln -s ${PWD}/kitty ~/.config/kitty
 	@ln -fs ${PWD}/XCompose ~/.XCompose
 	@ln -fs ${PWD}/hypridle.conf ~/.config/hypr/hypridle.conf
 	@ln -fs ${PWD}/hyprlock.conf ~/.config/hypr/hyprlock.conf

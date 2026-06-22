@@ -62,3 +62,8 @@ window#waybar.solo {
     color:      rgba(217, 216, 216, 1);
 }
 
+#custom-notification {
+    font-family: "Noto Sans Symbols", "Font Awesome 6 Free";
+    padding: 0 10px;
+    color: #ffffff;
+}

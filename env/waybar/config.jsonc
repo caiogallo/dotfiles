@@ -20,7 +20,8 @@
 		"cpu",
 		"disk",
 		"custom/power",
-		"tray"
+		"tray",
+		"custom/notification"
 	],
 
 	"hyprland/workspaces": {
@@ -98,9 +99,29 @@
 	"tray": {
 		"icon-size": 20
 	},
+	"custom/notification": {
+		"tooltip": false, 
+		"format": "{icon}",
+		"format-icons": {
+			"notification": "<span foreground='red'><sup></sup></span>",
+			"none": "",
+			"dnd-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-none": "",
+			"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"inhibited-none": "",
+			"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-inhibited-none": ""
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
 	"custom/power": {
 		"format": "  ",
-		"on-click": "systemctl poweroff",
+		"on-click": "zenity --question --text='Tem certeza que deseja desligar o computador?' --title='Confirmar Desligamento' && systemctl poweroff",
 		"tooltip": true,
 		"tooltip-format": "关机"
 	}
