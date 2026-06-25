@@ -7,6 +7,7 @@ sudo pacman -S --noconfirm --needed fzf
 sudo pacman -S --noconfirm --needed tmux
 sudo pacman -S --noconfirm --needed go 
 sudo pacman -S --noconfirm --needed jq
+sudo pacman -S --noconfirm --needed man
 
 # hyprland
 sudo pacman -S --noconfirm --needed waybar hyprpolkitagent hyprlock hypridle
@@ -31,7 +32,6 @@ sudo pacman -S --noconfirm --needed ttf-jetbrains-mono-nerd
 # Power control, battery threshould, performance profiles
 sudo pacman -S --noconfirm --needed tlp
 sudo systemctl enable --now tlp.service
-paru -S --noconfirm --needed tlpui
 
 # Bright control
 sudo pacman -S --noconfirm --needed brightnessctl
@@ -40,7 +40,6 @@ sudo pacman -S --noconfirm --needed swayosd
 sudo systemctl enable --now swayosd-libinput-backend.service # gst-plugin-pipewire
 
 sudo pacman -S --noconfirm --needed timeshift xorg-xhost
-paru -S --noconfirm --needed timeshift-autosnap
 sudo pacman -S --noconfirm --needed grub-btrfs
 
 sudo pacman -S --noconfirm --network uwsm
@@ -54,10 +53,8 @@ sudo pacman -S --noconfirm --needed sof-firmware
 
 # apps
 sudo pacman -S --noconfirm --needed obsidian obs-studio waypipe
-paru -S --noconfirm --needed localsend 
 
 # wdisplays
-paru -S --noconfirm --needed wdisplays
 sudo pacman -S --noconfim --needed yubikey-personalization
 sudo pacman -S --noconfim --needed yubikey-full-disk-encryption
 sudo pacman -S --noconfim --needed yubikey-manager
@@ -65,3 +62,5 @@ sudo pacman -S --noconfim --needed yubikey-manager
 # replace make with swaync
 sudo pacman -Rns mako
 sudo pacman -S --noconfirm --needed swaync
+
+./aur.sh
