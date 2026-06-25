@@ -58,6 +58,10 @@ paru -S --noconfirm --needed localsend
 
 # wdisplays
 paru -S --noconfirm --needed wdisplays
-sudo pacman -S yubikey-personalization
-sudo pacman -S yubikey-full-disk-encryption
-sudo pacman -S yubikey-manager
+sudo pacman -S --noconfim --needed yubikey-personalization
+sudo pacman -S --noconfim --needed yubikey-full-disk-encryption
+sudo pacman -S --noconfim --needed yubikey-manager
+
+# replace make with swaync
+sudo pacman -Rns mako
+sudo pacman -S --noconfirm --needed swaync
