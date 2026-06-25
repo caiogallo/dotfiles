@@ -3,7 +3,7 @@ PWD=$(shell pwd)
 install:
 	@ln -fs $(PWD)/gitconfig ~/.gitconfig
 	@mkdir -p ~/.config/hypr
-	@ln -fs $(PWD)/hyprland.conf ~/.config/hypr/hyprland.conf
+	@ln -fs $(PWD)/hyprland.lua ~/.config/hypr/hyprland.lua
 	@ln -fs $(PWD)/bashrc ~/.bashrc
 	@ln -fs $(PWD)/tmux.config ~/.tmux.conf
 	@ln -fs ${PWD}/../nvim ~/.config/nvim
@@ -20,6 +20,9 @@ install:
 	@sudo cp ${PWD}/timeshift-autosnap.conf /etc/timeshift-autosnap.conf
 	@sudo cp ${PWD}/pacman.conf /etc/pacman.conf
 	@sudo cp ${PWD}/ykfde.conf /etc/ykfde.conf
+
+#clenaup
+	@rm -rf ~/.config/waybar/waybar; rm -rf ~/.config/kitty/kitty # clenaup
 
 clean: 
 	@rm -rf ~/.gitconfig 
