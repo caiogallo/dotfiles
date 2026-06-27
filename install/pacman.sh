@@ -64,3 +64,4 @@ sudo pacman -Rns mako
 sudo pacman -S --noconfirm --needed swaync
 
 ./aur.sh
+

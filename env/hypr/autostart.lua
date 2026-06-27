@@ -1,0 +1,7 @@
+hl.on("hyprland.start", function()
+    hl.exec_cmd("uwsm app -- waybar")
+    hl.exec_cmd("uwsm app -- hypridle")
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
+    hl.exec_cmd("uwsm app -- swayosd-server")
+    hl.exec_cmd("uwsm app -- fcitx5 --disable notificationitem")
+end)
