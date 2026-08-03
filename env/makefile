@@ -40,3 +40,8 @@ clean:
 
 
 all: clean install
+
+install-quickshell:
+	@ln -fs ${PWD}/quickshell ~/.config
+remove-quickshell:
+	@rm -rf ~/.config/quickshell

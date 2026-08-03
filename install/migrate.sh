@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MIGRATION_FOLDER=./migrations
+MIGRATION_FOLDER=/home/caio/Projects/dotfiles/install/migrations
 MIGRATED_FOLDER=${MIGRATION_FOLDER}/executed
 
 mkdir -p $MIGRATION_FOLDER
@@ -24,6 +24,7 @@ create() {
 	local datetime=$(date +%Y%m%d%H%M%S)
 	local migration_file=${MIGRATION_FOLDER}/migration_$datetime.sh
 	echo "#!/usr/bin/env bash" >> ${migration_file}
+	echo "$@" >> ${migration_file}
 	chmod +x ${migration_file}
 	vim ${migration_file}
 }
@@ -36,7 +37,7 @@ pending() {
 	done
 }
 
-last_executed=$(ls -lpt migrations/executed | awk 'NR>1 {print $9}' | head -n 1)
+last_executed=$(ls -lpt ${MIGRATED_FOLDER} | awk 'NR>1 {print $9}' | head -n 1)
 
 rerun-last() {
 	echo re-running migration $last_executed
@@ -47,3 +48,7 @@ edit-last() {
 	vim ${MIGRATED_FOLDER}/${last_executed}
 }
 
+delete-last() {
+	echo deleting last migration ${last_executed}
+	rm ${MIGRATED_FOLDER}/${last_executed}
+}

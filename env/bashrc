@@ -64,3 +64,9 @@ export DBX_SKIP_WORKDIR=1
 export ANDROID_HOME=$HOME/Android/Sdk
 export NDK_HOME=$ANDROID_HOME/ndk/$(ls $ANDROID_HOME/ndk | tail -1)
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+pacman() {
+	command="pacman $@"
+	echo $command
+	source $CONFIG_PATH/install/migrate.sh ; create $command ; execute
+}

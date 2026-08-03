@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Arduino IDE
+Exec=uwsm app -- /home/caio/.local/bin/arduino-ide
+Terminal=false
+Type=Application
+Icon=arduino
+StartupWMClass=arduino
+Comment=Arduino IDE
+Categories=Development
