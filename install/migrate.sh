@@ -37,18 +37,23 @@ pending() {
 	done
 }
 
-last_executed=$(ls -lpt ${MIGRATED_FOLDER} | awk 'NR>1 {print $9}' | head -n 1)
+last_executed() {
+	echo $(ls -lpt ${MIGRATED_FOLDER} | awk 'NR>1 {print $9}' | head -n 1)
+}
 
 rerun-last() {
+	local last_executed=$(last_executed)
 	echo re-running migration $last_executed
 	${MIGRATED_FOLDER}/./${last_executed}
 }
 
 edit-last() {
+	local last_executed=$(last_executed)
 	vim ${MIGRATED_FOLDER}/${last_executed}
 }
 
 delete-last() {
+	local last_executed=$(last_executed)
 	echo deleting last migration ${last_executed}
 	rm ${MIGRATED_FOLDER}/${last_executed}
 }
