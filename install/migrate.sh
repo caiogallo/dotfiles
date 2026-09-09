@@ -7,7 +7,8 @@ mkdir -p $MIGRATION_FOLDER
 mkdir -p $MIGRATED_FOLDER
 
 execute() {
-	local migrations=$(ls -prt ${MIGRATION_FOLDER} | grep -v /)
+	local migrations
+	mapfile -t migrations < <(ls -prt ${MIGRATION_FOLDER} | grep -v /)
 
 	for migration in "${migrations[@]}"; do
 
@@ -30,7 +31,8 @@ create() {
 }
 
 pending() {
-	local pending_migrations=$(ls -prt ${MIGRATION_FOLDER} | grep -v /)
+	local pending_migrations
+	mapfile -t pending_migrations < <(ls -prt ${MIGRATION_FOLDER} | grep -v /)
 	echo pending migrations
 	for pending in "${pending_migrations[@]}"; do
 		echo " - ${pending}"

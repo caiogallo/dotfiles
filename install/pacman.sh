@@ -10,7 +10,7 @@ sudo pacman -S --noconfirm --needed jq
 sudo pacman -S --noconfirm --needed man
 
 # hyprland
-sudo pacman -S --noconfirm --needed waybar hyprpolkitagent hyprlock hypridle
+sudo pacman -S --noconfirm --needed hyprpolkitagent hyprlock hypridle
 
 #bluetooth
 sudo pacman -S --noconfirm --needed blueberry
@@ -58,10 +58,6 @@ sudo pacman -S --noconfirm --needed obsidian obs-studio waypipe
 sudo pacman -S --noconfim --needed yubikey-personalization
 sudo pacman -S --noconfim --needed yubikey-full-disk-encryption
 sudo pacman -S --noconfim --needed yubikey-manager
-
-# replace make with swaync
-sudo pacman -Rns mako
-sudo pacman -S --noconfirm --needed swaync
 
 ./aur.sh
 

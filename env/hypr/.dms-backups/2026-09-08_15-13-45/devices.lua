@@ -1,12 +1,12 @@
 hl.config({
     input = {
         -- kumara pro / zenbook
-        kb_model  = "kumara_ptbr",
-        kb_layout = "br",
-        kb_variant = "abnt2",
+--        kb_model  = "kumara_ptbr",
+--        kb_layout = "br",
+--        kb_variant = "abnt2",
 
---        kb_layout  = "us",
---        kb_variant = "intl",
+        kb_layout  = "us",
+        kb_variant = "intl",
 
         -- kb_layout  = "br,us"
         -- kb_variant = "abnt2,intl"
