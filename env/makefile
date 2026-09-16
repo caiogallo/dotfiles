@@ -10,6 +10,11 @@ install:
 	@ln -fs ${PWD}/hypr ~/.config/
 	@mkdir -p ~/.config/pipewire/pipewire.conf.d; ln -fs ${PWD}/echo-cancel.conf ~/.config/pipewire/pipewire.conf.d/echo-cancel.conf
 	@mkdir -p ~/.config/fontconfig; cp ${PWD}/fonts.conf ~/.config/fontconfig/fonts.conf
+	@mkdir -p ~/.config/opencode; ln -fs ${PWD}/opencode/AGENTS.md ~/.config/opencode/AGENTS.md
+	@mkdir -p ~/.config/hyprland-per-window-layout; ln -fs ${PWD}/hyprland-per-window-layout/options.toml ~/.config/hyprland-per-window-layout/options.toml
+
+	# Autostart (fcitx5 disabled + rquickshare)
+	@mkdir -p ~/.config/autostart; ln -fs ${PWD}/autostart/*.desktop ~/.config/autostart/
 
 	# systemd user units (hyprland session target + enable dms.service)
 	@mkdir -p ~/.config/systemd/user
@@ -35,6 +40,8 @@ clean:
 	#@rm -rf ~/.config/hypr/hypridle.conf
 	#@rm -rf ~/.config/hypr/hyprlock.conf
 	@rm -rf ~/.config/fontconfig/fonts.config
+	@rm -rf ~/.config/opencode/AGENTS.md
+	@rm -rf ~/.config/autostart
 	@rm -rf ~/.config/pipewire/pipewire.conf.d/echo-cancel.conf
 	@rm -rf ~/.config/systemd/user/hyprland-session.target
 	@rm -rf ~/.config/systemd/user/graphical-session.target.wants/dms.service

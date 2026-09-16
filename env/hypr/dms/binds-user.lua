@@ -42,10 +42,12 @@ hl.bind("switch:on:Lid Switch",  hl.dsp.exec_cmd("/home/caio/.local/bin/lid-swit
 hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("/home/caio/.local/bin/lid-switch open"),  { locked = true })
 
 -- Precise 1% multimedia adjustments (standard keys are handled by DMS defaults)
+hl.bind("XF86MonBrightnessUp",   hl.dsp.exec_cmd([[dms ipc call brightness increment 10 "backlight:intel_backlight"]]), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd([[dms ipc call brightness decrement 10 "backlight:intel_backlight"]]), { locked = true, repeating = true })
 hl.bind("ALT + XF86AudioRaiseVolume",  hl.dsp.exec_cmd("dms ipc call audio increment 1"),         { locked = true, repeating = true })
 hl.bind("ALT + XF86AudioLowerVolume",  hl.dsp.exec_cmd("dms ipc call audio decrement 1"),         { locked = true, repeating = true })
-hl.bind("ALT + XF86MonBrightnessUp",   hl.dsp.exec_cmd([[dms ipc call brightness increment 1 ""]]), { locked = true, repeating = true })
-hl.bind("ALT + XF86MonBrightnessDown", hl.dsp.exec_cmd([[dms ipc call brightness decrement 1 ""]]), { locked = true, repeating = true })
+hl.bind("ALT + XF86MonBrightnessUp",   hl.dsp.exec_cmd([[dms ipc call brightness increment 1 "backlight:intel_backlight"]]), { locked = true, repeating = true })
+hl.bind("ALT + XF86MonBrightnessDown", hl.dsp.exec_cmd([[dms ipc call brightness decrement 1 "backlight:intel_backlight"]]), { locked = true, repeating = true })
 
 -- Chromium PWA shortcuts
 hl.bind(mainMod .. " + SHIFT + Y", hl.dsp.exec_cmd("uwsm app -- chromium --app=https://youtube.com --class=YouTube"))

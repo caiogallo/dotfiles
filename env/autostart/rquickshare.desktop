@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=rquickshare
+Comment=Nearby Share / Quick Share daemon for Linux
+Exec=rquickshare
+Terminal=false
+Hidden=false
+NoDisplay=false
+Categories=Network;FileTransfer;
+StartupNotify=false
+X-GNOME-Autostart-enabled=true

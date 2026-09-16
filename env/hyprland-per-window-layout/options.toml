@@ -1,0 +1,11 @@
+# Layout per-window: foca no IntelliJ -> usa us puro (index 1)
+keyboards = [
+  "keychron--keychron-link--keyboard",
+  "logitech-wireless-keyboard-pid:4023",
+]
+
+[[default_layouts]]
+1 = [
+  "jetbrains-idea",
+  "jetbrains.*",
+]
